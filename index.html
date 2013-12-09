@@ -1,52 +1,265 @@
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Bootstrap-errordialog : Show validation Error Message in Bootstrap Dialog Box" />
+    <meta charset="utf-8">
+    <title>Bootstrap ErrorDialog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!-- Le styles -->
+    <link href="stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+    <link href="stylesheets/docs.css" rel="stylesheet">
+    <link href="stylesheets/prettify.css" rel="stylesheet">
 
-    <title>Bootstrap-errordialog</title>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
   </head>
 
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/vinaytech/Bootstrap-ErrorDialog">View on GitHub</a>
 
-          <h1 id="project_title">Bootstrap-errordialog</h1>
-          <h2 id="project_tagline">Show validation Error Message in Bootstrap Dialog Box</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/vinaytech/Bootstrap-ErrorDialog/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/vinaytech/Bootstrap-ErrorDialog/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="https://github.com/vinaytech/Bootstrap-ErrorDialog">@Github</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">                                                              
+              <li class="">
+                <a href="#top">Introduce</a>
+              </li>
+              <li class="">
+                <a href="#install">Installation</a>
+              </li>
+              <li class="">
+                <a href="#example">Examples</a>
+              </li>
+              <li class="">
+                <a href="#usage">Usage</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="bootstrap-errordialog" class="anchor" href="#bootstrap-errordialog"><span class="octicon octicon-link"></span></a>Bootstrap-ErrorDialog</h1>
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead">
+  <div class="container">
+      <h1>Bootstrap ErrorDialog</h1>
+    <p class="lead">jQuery plugin for Twitter Bootstrap. Use Bootstrap Popovers as errorDialog dialogs. Simple and easy.</p>
+  </div>
+</header>
 
-<p>Show validation Error Message in Bootstrap Dialog Box</p>
-      </section>
+  <div class="container">
+
+    <!--
+    ================================================== -->
+    <div class="row">
+      <div class="span12">
+
+
+        <!-- Overview
+        ================================================== -->
+        <section id="intro">
+          <h3>Let's face it: ErrorDialog dialog boxes are annoying</h3>
+          <p>This is my primary reason I wrote this plugin. I wanted a simple box to comfirm a task. Instead of using rude boxes that interrupt a user's workflow, <strong>let's use a popover instead</strong>. </p>
+        </section>
+
+
+        <section id="install">
+          <div class="page-header">
+            <h1>Installation</h1>
+          </div>
+
+          <p>Download <a href="https://github.com/vinaytech/Bootstrap-ErrorDialog/blob/master/bootstrap-errorsdialog.js" target="_blank">bootstrap-errorDialog.js</a>. Include after <code>jquery.js</code> and <code>bootstrap-tooltip.js</code>.</p>
+            <pre class="prettyprint"><code class="html">&lt;script type=&quot;text/javascript&quot; src=&quot;path/to/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;path/to/bootstrap-tooltip.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;path/to/bootstrap-errorsdialog.js&quot;&gt;&lt;/script&gt;</code></pre>
+          <h3>CSS</h3>
+          <p>The plugin uses the default popover styling Bootstrap provides.</p>
+
+          <h3>JS Dependencies</h3>
+          <ul>
+              <li><a href="http://jquery.com">jQuery</a></li>
+              <li><a href="http://getbootstrap.com/2.3.2/">Bootstrap Tooltip</a> (included in bootstrap.js)</li>
+          </ul>
+        </section>
+
+        <section id="example">
+          <div class="page-header">
+            <h1>Examples</h1>
+          </div>
+
+
+          <p>Add small overlays with "Yes" and "No" buttons, like those on the iPad, to any element. Click the button to trigger the errorDialog.</p>
+
+          <h3>Live demo</h3>
+          <div class="bs-docs-example" style="padding-bottom: 24px;">
+            <a class="btn btn-large btn-danger" data-toggle="errorDialog">Click to toggle errorDialog</a>
+          </div>
+
+          <h4>Four directions</h4>
+          <div class="bs-docs-example tooltip-demo">
+            <ul class="bs-docs-tooltip-examples">
+              <li><a class="btn" data-toggle="errorDialog" data-placement="left">ErrorDialog on left</a></li>
+              <li><a class="btn" data-toggle="errorDialog" data-placement="top">ErrorDialog on top</a></li>
+              <li><a class="btn" data-toggle="errorDialog" data-placement="bottom">ErrorDialog on bottom</a></li>
+              <li><a class="btn" data-toggle="errorDialog" data-placement="right">ErrorDialog on right</a></li>
+            </ul>
+          </div>
+
+          <h4>Singleton <span class="label label-important">New feature!</span></h4>
+          <div class="bs-docs-example tooltip-demo">
+            <ul class="bs-docs-tooltip-examples">
+              <li><a class="btn" data-toggle="errorDialog-singleton" data-placement="left">ErrorDialog on left</a></li>
+              <li><a class="btn" data-toggle="errorDialog-singleton" data-placement="top">ErrorDialog on top</a></li>
+              <li><a class="btn" data-toggle="errorDialog-singleton" data-placement="bottom">ErrorDialog on bottom</a></li>
+              <li><a class="btn" data-toggle="errorDialog-singleton" data-placement="right">ErrorDialog on right</a></li>
+            </ul>
+          </div>
+
+          <h4>Popout <span class="label label-important">New feature!</span></h4>
+          <div class="bs-docs-example tooltip-demo">
+            <ul class="bs-docs-tooltip-examples">
+              <li><a class="btn" data-toggle="errorDialog-popout" data-placement="left">ErrorDialog on left</a></li>
+              <li><a class="btn" data-toggle="errorDialog-popout" data-placement="top">ErrorDialog on top</a></li>
+              <li><a class="btn" data-toggle="errorDialog-popout" data-placement="bottom">ErrorDialog on bottom</a></li>
+              <li><a class="btn" data-toggle="errorDialog-popout" data-placement="right">ErrorDialog on right</a></li>
+            </ul>
+          </div>
+
+        </section>
+
+
+        <section id="usage">
+          <div class="page-header">
+            <h1>Usage</h1>
+          </div>
+
+          <p>Enable errorDialogs via JavaScript:</p>
+          <pre class="prettyprint linenums">$('#example').errorsdialog(options)</pre>
+
+          <p>Recommend way to use:</p>
+          <pre class="prettyprint linenums">$('[data-toggle="errorsdialog"]').errorsdialog(options)</pre>
+
+          <h3>Options</h3>
+          <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 100px;">Name</th>
+               <th style="width: 100px;">type</th>
+               <th style="width: 50px;">default</th>
+               <th>description</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>animation</td>
+               <td>boolean</td>
+               <td>true</td>
+               <td>Apply a CSS fade transition to the tooltip</td>
+             </tr>
+             <tr>
+               <td>placement</td>
+               <td>string | function</td>
+               <td>'top'</td>
+               <td>How to position the errorDialog - top | bottom | left | right</td>
+             </tr>
+             <tr>
+               <td>selector</td>
+               <td>string</td>
+               <td>false</td>
+               <td>If a selector is provided, tooltip objects will be delegated to the specified targets</td>
+             </tr>
+             <tr>
+               <td>trigger</td>
+               <td>string</td>
+               <td>'click'</td>
+               <td>How errorDialog is triggered - click | hover | focus | manual</td>
+             </tr>
+             </tbody>
+          </table>
+          <div class="alert alert-info">
+            <strong>Heads up!</strong>
+            Options for individual errorDialogs can alternatively be specified through the use of data attributes.
+          </div>
+
+          <h3>Markup</h3>
+          <p>For performance reasons, the Tooltip and errorDialog data-apis are opt in. If you would like to use them just specify a selector option.</p>
+
+          <h3>Methods</h3>
+          <h4>$().errorsdialog(options)</h4>
+          <p>Initializes errorDialogs for an element collection.</p>
+          <h4>.errorsdialog('show')</h4>
+          <p>Reveals an elements errorDialog.</p>
+          <pre class="prettyprint linenums">$('#element').errorsdialog('show')</pre>
+          <h4>.errorsdialog('hide')</h4>
+          <p>Hides an elements errorDialog.</p>
+          <pre class="prettyprint linenums">$('#element').errorsdialog('hide')</pre>
+          <h4>.errorsdialog('toggle')</h4>
+          <p>Toggles an elements errorDialog.</p>
+          <pre class="prettyprint linenums">$('#element').errorsdialog('toggle')</pre>
+          <h4>.errorsdialog('destroy')</h4>
+          <p>Hides and destroys an element's errorDialog.</p>
+          <pre class="prettyprint linenums">$('#element').errorsdialog('destroy')</pre>
+        </section>
+
+
+
+
+      </div>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Bootstrap-errordialog maintained by <a href="https://github.com/vinaytech">vinaytech</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+  </div>
 
-    
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>Coding it by <a href="http://twitter.com/ethaizone" target="_blank">@vinaytech</a>.</p>
+        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>
+          , documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Original template of documentation from <a href="twitter.github.io/bootstrap/">Twitter Bootstrap</a>.</p>
+        
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/bootstrap-transition.js"></script>
+    <script src="javascripts/bootstrap-tooltip.js"></script>
+
+    <script src="javascripts/holder.js"></script>
+    <script src="javascripts/prettify.js"></script>
+
+    <script src="javascripts/application.js"></script>
+
+    <script src="javascripts/bootstrap-errordialog.js"></script>
+
 
   </body>
 </html>
+
